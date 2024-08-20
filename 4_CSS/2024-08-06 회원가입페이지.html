@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        h1{
+            margin-top: 30px;
+            text-align: center;
+            color: darkblue;
+        }
+
+        fieldset{
+            background-color: skyblue;
+            text-align: center;
+        }
+
+        button{
+            width: 400px;
+            background-color: mediumblue;
+            color: #fff;
+        }
+
+        div{
+            text-align: center;
+        }
+
+        input{
+            background-color: bisque;
+            margin: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>KH 회원가입</h1>
+    <br>
+    <hr>
+    <br>
+    <fieldset>
+    <form action="post">
+    <input type="text" name="userId" id= "userId" placeholder="아이디">
+    <br>
+    <input type="password" name="userPwd" id= "userPwd" placeholder="비밀번호">
+    <br>
+    <input type="email" name="email" id="email" placeholder="[선택] 이메일주소">
+
+</fieldset>
+<br>
+
+<fieldset>
+
+        <input type="text" name="userName" placeholder="이름">
+        <br>
+        생년월일 : <input type="date" name="birth">
+        <br>
+        <select name="telecom">
+            <option value="SKT">SKT</option>
+            <option value="U+">U+</option>
+            <option value="KT" selected>KT</option>
+        </select>
+        <input type="text" name="phone" placeholder="휴대전화번호">
+</fieldset>
+<br>
+<div class="btn"><button>회원 가입</button></div>
+</form>
+</body>
+</html>

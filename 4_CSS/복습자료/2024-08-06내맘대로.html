@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav</title>
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+</head>
+ <style>
+* { 
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    color: aliceblue;
+    font-weight: 900;
+    font-size: 1.5em;
+    line-height: 50px;
+}
+body {
+    display: flex;
+    background: black;
+    height: 100vh;
+    position: relative;
+ }
+nav { 
+    background: black;
+}
+nav ul { 
+    display: flex;
+    list-style: none;
+    position: relative;
+    
+}
+nav ul li { }
+nav ul li a {
+    display: block;
+    color: white;
+    line-height: 50px;
+    padding: 0 25px;
+
+    text-decoration: none;
+ }
+
+ #marker{
+    position: absolute;
+    width: 120px;
+    height: 50px;
+    background: linear-gradient(0deg, #ff9b0633,transparent);
+    border-bottom: 5px #ff9b06 solid;
+    box-sizing: border-box;
+    transition: all 0.4s;
+ }
+</style>
+<body>
+    <header>LOGO</header>
+    <nav>
+        <ul>
+            <li><a href="#"><i class="xi-home-o"></i>Home</a></li>
+            <li><a href="#"><i class="xi-profile-o"></i>Profile</a></li>            
+            <li><a href="#"><i class="xi-heart-o"></i>Likes</a></li>
+            <li><a href="#"><i class="xi-dashboard-o"></i>board</a></li>
+            <li><a href="#"><i class="xi-mail-read-o"></i>Mail</a></li>
+            <div id="marker"></div>
+        </ul>
+    </nav>
+</body>
+<script>
+    let nav_a = document.querySelectorAll("nav a");
+    nav_a.forEach(function(link) { 
+        link.addEventListener("click", function(A) {
+            menu_bar(A.target);
+        })
+    })
+    let marker = document.querySelector("#marker"); 
+    function menu_bar(B){ 
+        marker.style.left = B.offsetLeft + "px"; 
+        marker.style.width = B.offsetWidth + "px";
+    }
+</script>
+</html>

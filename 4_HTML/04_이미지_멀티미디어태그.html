@@ -1,0 +1,87 @@
+<!DOCTYPE html> <!-- 문서 유헝 정의 . HTML 형식 문서 선언 -->
+<html lang="ko"> <!-- 문서 전체를 감싸는 태그, 루트 요소로 문서의 시작과 끝을 표시한다 -->
+    <!-- lang 속성 : 문서 고유 언어 설정 (ko, en...) -->
+    <!--
+        머리부
+        문서의 각종 정보 (제목, 설명, 외부파일 포함 등등) 작성
+    -->
+    <head>
+        <meta charset="UTF-8"> <!-- 문서의 인코딩 설정 -->
+        <meta name ="generator" content="VS Code">  <!-- 문서 작성 시 사용되는 프로그램 -->
+        <meta name ="author" content="joowon">      <!-- 문서 작성자 -->
+        <meta name="description" content="HTML 공부를 위한 문서"> <!--문서에 대한 설명-->
+
+        <meta name="viewport" content="width = device-width">
+        <!-- 뷰포트 (브라우저의 웹 콘텐츠를 볼 수 있는 창의 영역) 설정. 장치길이만큼 설정-->
+        <!-- meta 태그 : 종료태그 없음, 사용자에게 표시되는 부분이 아니고,
+                        브라우저/검색엔진/기타 서비스 부분에서 사용되는 설정 
+        -->
+        <!-- 문서의 제목 설정 (브라우저의 탭 부분에 표시) -->
+        <title>HTML - 이미지/멀티미디어 태그</title>
+    </head>
+    <!--
+        몸체부.
+        브라우저 화면 상에 표시할 모든 정보, 내용을 작성        
+    -->
+    <body>
+        <h2>이미지 태그</h2>
+        <!--
+            <img src = "표시하고자 하는 이미지 경로" 
+            [alt="이미지의 설명"]
+            width="가로길이(px/%)"
+            height="세로길이(px/%)"></img>   
+        -->
+        <h3>* src 속성</h3>
+            <img src="resources/sunflower.jpg" width="400px" height="250px">
+    
+        <h3>* alt 속성</h3>
+            <p>
+                - 이미지 경로가 잘못되었거나, 제대로 표시하지 못하는 경우 대체할 텍스트<br>
+                - 시각장애인 분들을 위한 스크린리더에서 이미지에 대한 설명을 읽어줄 수 있다.
+            </p>
+            <img src="https://img.freepik.com/free-photo/anime-landscape-person-traveling_23-2151038201.jpg?t=st=1722578584~exp=1722582184~hmac=b84c3c7a536f0bef422cf3d2dfaa4e7b6dfa66d4ae123f544a72349dbf5aa48e&w=740"
+                 alt="AI 이미지" width="500px" height="350px">
+            <h3>* width, height 속성</h3>
+            <p>
+                이미지의 가로(width), 세로(height) 길이 조정 가능 <br>
+                고정길이 (px), 가변길이 (%) 지정 -> 기본값 : px
+            </p>
+
+            <h4>고정 길이 (px) - 기본값</h4>
+            <p>화면 사이즈가 변경되어도 이미지의 크기는 고정(변동 없음)</p>
+            <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzAxMTJfMjEx%2FMDAxNjczNDkyNzg3MzY1.F-coqSCZW814EQ0Gxi9q-93zZq8x1W9RYC7nfM2WoBcg.V1frmMtI80oR4FVnF3CSfZm38yTDS1ZyrlSIII0UjdAg.JPEG.zjwm326%2F04.jpg&type=sc960_832" width="200px" height="150px">
+            <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxOTA4MTNfNzEg%2FMDAxNTY1NjkzNTM4NjIx.9KOcgpcDKXlW4I1tbaYl5vhW2QynaXs8zDP9l6xT3nIg.Ie9PHf6-U0rjtNkykRdUMRtsxsSCHCGETP52RMApcEAg.JPEG.rabbitchuuu%2FSAM_0078.JPG&type=sc960_832" width="200px" height="100px">
+            <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDA5MTNfMjQ3%2FMDAxNTk5OTcwNDIzNTY0.UnrOQ1gFaByx0Aav1AfUYrceINdbDDb-_LuV8fI1yGUg.oBsXH4NMF5MYYS32BN08cdKWsCzWrULBIH6WwY2eFGIg.JPEG.sseam1115%2FIMG_9575.JPG&type=sc960_832" width="100px" height="150px">
+            <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDEyMDZfMjMx%2FMDAxNjA3MjI5Njk0NDg3.K2wAYf84vLZDM6T5ITrzuWj5YC_TuwMuWU6OeIuYu-kg.YeOEdmWQRIiTOsmvcF92FRiW9fmR7y2J1rX-S9eiTTIg.JPEG.kimsuin2124%2FIMG_2532.JPG&type=sc960_832" width="100px" height="100px">
+
+            <h4>가변 길이 (%)</h4>
+            <p>화면 사이즈가 변경되거나 부모 요소 사이즈에 따라 이미지 크기가 변경</p>
+            <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fpost.phinf.naver.net%2FMjAyMTAyMDlfMjE4%2FMDAxNjEyODM2OTU5ODQ0.NP7Lqc3ncdlb_BRLumzKnbW674yUemMt_X0mpMKxFCIg.wnBursd8Qqq1_NDMKfU2sHK22B6yckihJlfUbkL4Go8g.JPEG%2FIpCN8gF1T_X9lIFUBhXWDNDpYApE.jpg&type=sc960_832" width="10%" height="150px">
+            <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzEwMDFfMTkw%2FMDAxNjk2MTUwMjEyNzc4.RNaEj6WUQdfVHCEbk0_X7naPtOyKBEW3ApjzJmpFvKog.0Lkpqbc4a1rSlHlinTkixWilCN0TZ7i5txUu8HIUeJIg.JPEG.hyomin_0222%2FIMG_8121.JPG&type=sc960_832" width="15%" height="150px">
+            <img src="https://search.pstatic.net/sunny/?src=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F21%2F4b%2F2a%2F214b2a67cca2c7ed4ef4e565e4c112d6.jpg&type=sc960_832" width="20%" height="150px">
+            <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA1MTJfMjM0%2FMDAxNjgzODk5NzY4NjA2.AlJtazQDKMARN213mbnB9M8ch8as6Mk_weQpx4aoBLog.Ex2h2vGTP3wfMVAIHEDOvpcIypFq7wqNQMspfqQwSaQg.JPEG.itsallaboutsia%2FIMG_8481.JPG&type=sc960_832" width="25%" height="150px">
+
+            <hr>
+            <h2>오디오 태그</h2>
+            <!-- 
+            <audio src = "오디오 파일 경로" controls autoplay loop></audio>
+             - controls : 재생도구 출력여부
+             - autoplay : 자동재생 여부(크롬 x, 익스플로러 x... 거의 안된다..)
+             - loop     : 반복재생 여부
+             - muted    : 음소거 설정
+            -->
+             <audio src="resources/inner_peace.mp3" controls autoplay loop muted></audio>
+
+             <hr>
+
+             <h2>비디오 태그</h2>
+             
+             <!--
+                video src ="비디오 파일 경로" controls autoplay loop
+                        width="" height="" poster="썸네일이미지경로"</video>
+             -->
+             <video src="resources/sample.mp4" controls autoplay loop width="300px" height="300px" poster="resources/sunflower.jpg"></video>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </body>
+
+</html>
